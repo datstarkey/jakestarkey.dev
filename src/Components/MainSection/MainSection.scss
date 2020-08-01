@@ -1,0 +1,50 @@
+@import "../../Variables";
+
+.page-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  border: $base-white solid 0px;
+  padding-left: 5vw;
+  border-radius: 5rem;
+
+  > .content {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.clip-in {
+  animation: clip-in 2s ease-in-out;
+}
+
+.clip-out {
+  animation: clip-out 2s ease-in-out;
+}
+
+@keyframes clip-in {
+  0% {
+    clip-path: circle(0% at 0% 0%);
+    background-color: #111;
+  }
+
+  100% {
+    clip-path: circle(100%);
+    background-color: transparent;
+  }
+}
+
+@keyframes clip-out {
+  100% {
+    clip-path: circle(0% at 0% 0%);
+    background-color: #111;
+  }
+
+  0% {
+    clip-path: circle(100%);
+    background-color: transparent;
+  }
+}
