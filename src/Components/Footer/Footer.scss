@@ -8,9 +8,49 @@
   margin-left: 10%;
 }
 
+.footer-animate {
+  animation: slide-in-bottom ease-in-out;
+}
+
+.delay-1 {
+  animation-duration: 3s;
+}
+
+.delay-2 {
+  animation-duration: 3.25s;
+}
+
+.delay-3 {
+  animation-duration: 3.5s;
+}
+
+.delay-4 {
+  animation-duration: 3.75s;
+}
+
 .icon-box {
   display: flex;
-  > i {
+
+  > a {
     margin-right: 2vw;
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+@keyframes slide-in-bottom {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+
+  75% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
   }
 }

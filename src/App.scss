@@ -5,8 +5,16 @@
 @import "./_Variables";
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
+:root {
+  body {
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    color: $base-white;
+  }
+}
+
 .icon {
-  font-size: 2vw;
+  font-size: 1.563em;
 }
 
 .icon-hover {
@@ -22,26 +30,34 @@ a {
   cursor: pointer;
 }
 
+button {
+  font-size: 1em;
+}
+
 h1 {
+  margin-top: 0;
+  font-size: 3.052em;
+}
+
+h2 {
+  font-size: 2.441em;
+}
+
+h3 {
+  font-size: 1.953em;
+}
+
+h4 {
+  font-size: 1.563em;
+}
+
+h5 {
+  font-size: 1.25em;
+}
+
+td {
   color: $base-white;
-  font-family: "Roboto", sans-serif;
-  font-size: 5vw;
-}
-
-p {
-  color: white;
-  font-family: "Roboto", sans-serif;
-  font-size: 1.2vw;
-}
-
-span {
-  color: $dark-background;
-  font-family: "Roboto", sans-serif;
-  font-size: 1rem;
-}
-
-i {
-  font-family: "Roboto", sans-serif;
+  pad: 1rem;
 }
 
 .nav {
@@ -79,13 +95,11 @@ i {
 
 .background {
   position: absolute;
-  bottom: 0;
-  right: 0;
-
   background-color: #080808;
   background-image: url("./Assets/background.png");
   background-repeat: no-repeat;
   background-position: right;
+  background-size: auto 100%;
   width: 100%;
   height: 100%;
 
@@ -111,27 +125,35 @@ i {
   opacity: 0.2;
 }
 
+@media only screen and (min-width: 2000px) {
+  :root {
+    body {
+      font-size: 26px;
+    }
+  }
+}
+
 @media only screen and (max-width: 1024px) {
-  h1 {
-    font-size: 6vh;
-  }
-
-  p {
-    font-size: 2vh;
-  }
-
-  .icon {
-    font-size: 2.5vh;
+  .background {
+    right: 0;
+    bottom: 0;
+    background-image: none;
   }
 
   .main-content {
     position: absolute;
     width: 80%;
   }
+}
 
-  .background {
-    right: 0;
-    bottom: 0;
-    background-image: none;
+@media only screen and (max-width: 760px) {
+  :root {
+    body {
+      font-size: 10px;
+    }
+  }
+
+  .button {
+    margin: 0.5em;
   }
 }

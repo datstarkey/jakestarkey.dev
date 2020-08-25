@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 import "./MainSection.scss";
 import { useLocation } from "react-router-dom";
 import About from "./Pages/About";
+import Contact from "./Pages/Contact";
+import Skills from "./Pages/Skills";
+import Projects from "./Pages/Projects";
 
 interface pageMap {
   [key: string]: JSX.Element;
@@ -10,7 +13,7 @@ interface pageMap {
 const MainSection = () => {
   let location = useLocation();
   const [currentPage, setCurrentPage] = useState("/about");
-  const pages: pageMap = { "/about": <About />, "/projects": <h1>Projects</h1>, "/contact": <h1>Contact</h1>, "/skills": <h1>Skills</h1> };
+  const pages: pageMap = { "/about": <About />, "/projects": <Projects />, "/contact": <Contact />, "/skills": <Skills /> };
 
   useEffect(() => {
     if (currentPage !== location.pathname && location.pathname !== "/") {
@@ -18,7 +21,7 @@ const MainSection = () => {
       setTimeout(() => {
         setCurrentPage(location.pathname);
         document.getElementById("main")?.classList.replace("clip-out", "clip-in");
-      }, 2000);
+      }, 1900);
     }
   }, [location, currentPage]);
 

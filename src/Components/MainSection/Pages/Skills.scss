@@ -1,0 +1,29 @@
+@import "../../../Variables";
+.skills-content {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.skills-list {
+  color: $base-white;
+}
+
+dt > h3 {
+  font-family: "Roboto", sans-serif;
+  color: $secondary-blue;
+  text-decoration: underline;
+}
+
+dd > a {
+  font-family: "Roboto", sans-serif;
+  text-decoration: none;
+  padding: 5px 10px;
+  color: $base-white;
+
+  &:hover {
+    cursor: pointer;
+    color: $secondary-blue;
+  }
+}
