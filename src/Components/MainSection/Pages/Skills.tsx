@@ -12,7 +12,7 @@ const Skills = () => {
         { name: "Typescript", tag: "https://www.typescriptlang.org/" },
         { name: "React", tag: "https://reactjs.org/" },
         { name: "Angular", tag: "https://angular.io/" },
-        { name: "Vuejs", tag: "https://vuejs.org/" },
+        { name: "VueJs", tag: "https://vuejs.org/" },
         { name: "Express", tag: "https://expressjs.com/" },
         { name: "Sass", tag: "https://sass-lang.com/" },
       ],
@@ -25,7 +25,7 @@ const Skills = () => {
         { name: "Core 3.1", tag: "https://docs.microsoft.com/en-us/dotnet/core/" },
         { name: "ASP core 3.1", tag: "https://dotnet.microsoft.com/learn/aspnet/what-is-aspnet-core" },
         { name: "WPF", tag: "https://docs.microsoft.com/en-us/dotnet/framework/wpf/introduction-to-wpf" },
-        { name: "Winforms", tag: "https://docs.microsoft.com/en-us/dotnet/framework/winforms/windows-forms-overview" },
+        { name: "WinForms", tag: "https://docs.microsoft.com/en-us/dotnet/framework/winforms/windows-forms-overview" },
         { name: "MVC", tag: "https://dotnet.microsoft.com/apps/aspnet/mvc" },
         { name: "EF core", tag: "https://docs.microsoft.com/en-us/ef/core/" },
         { name: "Selenium C#", tag: "https://www.selenium.dev/" },
@@ -48,7 +48,7 @@ const Skills = () => {
     {
       title: "Databases",
       list: [
-        { name: "Postgresql", tag: "https://www.postgresql.org/" },
+        { name: "PostgreSql", tag: "https://www.postgresql.org/" },
         { name: "MySql", tag: "https://www.mysql.com/" },
         { name: "Mongodb", tag: "https://www.mongodb.com/" },
       ],
