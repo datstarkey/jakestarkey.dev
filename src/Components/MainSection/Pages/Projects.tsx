@@ -53,7 +53,7 @@ const Projects = () => {
               </p>
 
               <dl>
-                <dt>Technology Used</dt>
+                <dt>Technology Used : </dt>
                 {project.technology.map((technology, index) => (
                   <dd key={index}>{technology}</dd>
                 ))}

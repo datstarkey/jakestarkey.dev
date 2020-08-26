@@ -30,6 +30,7 @@ const Skills = () => {
         { name: "EF core", tag: "https://docs.microsoft.com/en-us/ef/core/" },
         { name: "Selenium C#", tag: "https://www.selenium.dev/" },
         { name: "NUnit", tag: "https://nunit.org/" },
+        { name: "Xamarin", tag: "https://dotnet.microsoft.com/apps/xamarin" },
       ],
     },
 
