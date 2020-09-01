@@ -26,7 +26,7 @@ const dataScope: IProject = {
   technology: ["React-Typescript", ".Net Core ASP 3.1", "JWT", "MySQL"],
 };
 
-const winMQTT: IProject = {
+const ladsOnTour: IProject = {
   title: "WinMQTT",
   description:
     "A Simple MQTT client for windows. This was designed by myself for use in my home automation setup. The idea is allow a users windows PC to be controller via a MQTT server",
@@ -35,6 +35,15 @@ const winMQTT: IProject = {
   technology: ["WinForms", "C#", "MQTT"],
 };
 
-const projects: IProject[] = [personalWebsite, willSimpson, dataScope, winMQTT];
+const winMQTT: IProject = {
+  title: "Lads On Tour",
+  description:
+    "A Full Stack solution for a gaming website, this uses .Net Core ASP to serve an Angular frontend. Using PostgreSQL as the database and OAuth2 integration into Discord, Twitch and BattleNet. The jenkins build server checks for updates on the origin everyday and deploys via Octpus Deploy.",
+  link: "https://beta.ladsontour.eu",
+  github: "https://github.com/datstarkey/LadsOnTourWebsite/",
+  technology: ["Angular", ".Net Core ASP", "PostgreSQL", "OAuth2"],
+};
+
+const projects: IProject[] = [personalWebsite, ladsOnTour, willSimpson, dataScope, winMQTT];
 
 export default projects;
