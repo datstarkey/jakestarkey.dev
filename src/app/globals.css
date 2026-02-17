@@ -1,0 +1,114 @@
+@import "tailwindcss";
+
+@theme {
+  /* Font families — resolved via next/font CSS vars set on <html> */
+  --font-sans: var(--font-dm), 'DM Sans', sans-serif;
+  --font-mono: var(--font-jetbrains), 'JetBrains Mono', monospace;
+  --font-display: var(--font-syne), 'Syne', sans-serif;
+
+  /* Color palette */
+  --color-bg: #07080d;
+  --color-surface: #0d0e16;
+  --color-raised: #13141f;
+  --color-line: #1c1d2a;
+  --color-line2: #131420;
+  --color-accent: #e2fd5c;
+  --color-teal: #00c9a7;
+  --color-ink: #d8dff0;
+  --color-ink-2: #8a9ab5;
+  --color-ink-3: #4a5268;
+
+  /* Custom animations */
+  --animate-status-pulse: status-pulse 2s ease-in-out infinite;
+  --animate-scroll-bounce: scroll-bounce 2s ease-in-out infinite;
+  --animate-slide-up: slide-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+
+  @keyframes status-pulse {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.3;
+    }
+  }
+
+  @keyframes scroll-bounce {
+    0%,
+    100% {
+      transform: translateX(-50%) translateY(0);
+    }
+    50% {
+      transform: translateX(-50%) translateY(8px);
+    }
+  }
+
+  @keyframes slide-up {
+    from {
+      opacity: 0;
+      transform: translateY(24px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #07080d;
+    color: #d8dff0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: #e2fd5c;
+    color: #07080d;
+  }
+
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #07080d;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #1c1d2a;
+    border-radius: 2px;
+  }
+}
+
+@layer utilities {
+  .text-stroke-hero {
+    -webkit-text-stroke: 1px rgba(216, 223, 240, 0.15);
+    color: transparent;
+  }
+
+  .grid-bg {
+    background-image: linear-gradient(#131420 1px, transparent 1px),
+      linear-gradient(90deg, #131420 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+
+  .mask-radial {
+    -webkit-mask-image: radial-gradient(
+      ellipse 90% 90% at 50% 50%,
+      black 20%,
+      transparent 100%
+    );
+    mask-image: radial-gradient(
+      ellipse 90% 90% at 50% 50%,
+      black 20%,
+      transparent 100%
+    );
+  }
+}
